@@ -24,26 +24,15 @@ class Hello extends Command
     {
         $this->output = $output;
 
-        $this->getAllFundBaseDetail();
-        //$this->getFundList();
-        //$this->getFundDetail(161725);
-        /////$this->processList();
-        //$this->getMinSet();
+        //$this->getFundList(); //获取所有基金
 
-       /* $j = [
-            "j1"=>[1,2,3,4],
-            "j2"=>[2,3,4,5],
-            "j3"=>[1,3,4,5],
-            "j4"=>[1,2,6,7],
-            "j5"=>[3,4,6,8],
-            "j6"=>[2,3,5,6],
-        ];
+        $this->processList();//采集更新基金数据详情
 
-        $search = [2,3,4,1];
+        //$this->getAllFundBaseDetail(); //获取基金持仓股
 
-        var_dump($this->a($j,$search));exit('x');*/
+
         // 指令输出
-        $output->writeln('hello');
+        $output->writeln('采集成功');
     }
 
     function getFundList(){
